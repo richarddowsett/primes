@@ -2,7 +2,7 @@ package richarddowsett.primes
 
 object MultiplicationTablePrinter {
 
-  def createTable(primes: List[Int]):List[List[String]] = {
+  def createTable(primes: List[BigInt]):List[List[String]] = {
     val header = primes.map(_.toString).::(" ")
     val body = primes.map(x => {
       primes.map(y => x * y).map(_.toString).::(x.toString)

@@ -3,8 +3,13 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'scala'
+apply plugin: 'application'
 
+mainClassName = "richarddowsett.primes.PrimeMain"
+run {
+    if (project.hasProperty('runArgs')) { args findProperty('runArgs') }
 
+}
 
 sourceCompatibility = 1.8
 
